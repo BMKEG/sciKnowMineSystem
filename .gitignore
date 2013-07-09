@@ -4,3 +4,6 @@
 /.actionScriptProperties
 /.flexLibProperties
 /bin
+/bin-debug
+/.flexProperties
+**/.DS_Store
