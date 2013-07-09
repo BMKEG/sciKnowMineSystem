@@ -7,3 +7,4 @@
 /bin-debug
 /.flexProperties
 **/.DS_Store
+/libs/triage-as*.swc
