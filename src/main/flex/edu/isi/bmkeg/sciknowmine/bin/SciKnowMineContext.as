@@ -1,4 +1,4 @@
-package edu.isi.bmkeg.triageApp
+package edu.isi.bmkeg.sciknowmine.bin
 {	
 	import edu.isi.bmkeg.triageModule.TriageModuleContext;
 	import edu.isi.bmkeg.triageModule.TriageModule;
@@ -9,7 +9,7 @@ package edu.isi.bmkeg.triageApp
 	
 	import org.robotlegs.utilities.modular.mvcs.ModuleContext;
 	
-	public class TriageAppContext extends ModuleContext
+	public class SciKnowMineContext extends ModuleContext
 	{
 
 		override public function startup():void
