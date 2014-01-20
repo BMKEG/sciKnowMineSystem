@@ -10,9 +10,9 @@
 	    <relativePath>../bmkeg-as-parent</relativePath>
  	</parent>
 
-	<artifactId>triageClientApp</artifactId>
+	<artifactId>sciKnowMineSystem</artifactId>
 	<version>1.1.5-SNAPSHOT</version>
-	<name>Triage Client Application</name>
+	<name>SciKnowMine Client Application</name>
 	<packaging>swf</packaging>
 	
 	<properties>
@@ -37,7 +37,7 @@
 				<artifactId>flexmojos-maven-plugin</artifactId>
 				<extensions>true</extensions>
 				<configuration>
-					<sourceFile>edu/isi/bmkeg/triageApp/TriageApp.mxml</sourceFile>
+					<sourceFile>edu/isi/bmkeg/sciknowmine/bin/sciKnowMineSystem.mxml</sourceFile>
 					<swfVersion>11</swfVersion>
 					<compilerWarnings>
 						<warn-no-constructor>false</warn-no-constructor>

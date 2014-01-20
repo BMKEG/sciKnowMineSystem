@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:mx="library://ns.adobe.com/flex/mx" 
+		 initialize="init()"
+		 width="100%" height="100%">
+	<s:layout>
+		<s:HorizontalLayout/>
+	</s:layout>
+
+	<fx:Script>
+		<![CDATA[
+			
+			import edu.isi.bmkeg.digitalLibrary.model.qo.citations.*;
+			import edu.isi.bmkeg.triage.events.*;
+			import edu.isi.bmkeg.triage.model.qo.*;
+			import edu.isi.bmkeg.triage.rl.events.*;
+			import edu.isi.bmkeg.triageModule.events.*;
+			
+			import mx.collections.*;
+			import mx.collections.errors.ItemPendingError;
+			
+			import spark.events.GridSelectionEvent;
+			import spark.components.gridClasses.GridSelectionMode;
+			
+			[Bindable]
+			public var triageCorporaCounts:ArrayCollection = new ArrayCollection();
+			
+			[Bindable]
+			public var articleCorporaCounts:ArrayCollection = new ArrayCollection();
+
+			public function init():void 
+			{
+				//triageDocumentListDataGrid.addEventListener(KeyboardEvent.KEY_UP, keyHandler);
+			}
+			
+			private function popupFormatter(item:Object, column:GridColumn):String {
+				
+				return item.citation;
+				
+			}
+			
+			protected function updateCorpora_clickHandler(event:MouseEvent):void
+			{
+				this.dispatchEvent(
+					new TransferTriageInsToArticleCorporaEvent()
+				);
+			}
+			
+		]]>
+	</fx:Script>
+	
+	<s:DataGrid id="triageCorporaDataGrid" width="75%" height="100%" 
+				dataProvider="{triageCorporaCounts}"
+			 	selectionMode="{GridSelectionMode.NONE}"	
+				sortableColumns="false">
+		<s:columns>
+			<s:ArrayList>
+				<s:GridColumn headerText="Triage Corpus"  
+							  dataField="triageCorpusName"/>				
+				<s:GridColumn headerText="..."/>				
+			</s:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+	
+	<s:Button id="updateCorpora" 
+			  label=" >>> " 
+			  click="updateCorpora_clickHandler(event)"/>
+
+	<s:DataGrid id="articleCorporaDataGrid" width="20%" height="100%" 
+				dataProvider="{articleCorporaCounts}"
+				selectionMode="{GridSelectionMode.NONE}"	
+				sortableColumns="false">
+		<s:columns>
+			<s:ArrayList>
+				<s:GridColumn headerText="Article Corpus"  
+							  dataField="corpus"/>				
+				<s:GridColumn headerText="Count"  
+							  dataField="count"/>				
+			</s:ArrayList>
+		</s:columns>
+	</s:DataGrid>
+
+</s:Group>
