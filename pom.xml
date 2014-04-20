@@ -139,6 +139,18 @@
 		<dependency>
 			<groupId>edu.isi.bmkeg</groupId>
 			<type>swc</type>
+			<artifactId>digitalLibraryClientComponents</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>edu.isi.bmkeg</groupId>
+			<type>swc</type>
+			<artifactId>lapdftextClientComponents</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>edu.isi.bmkeg</groupId>
+			<type>swc</type>
 			<artifactId>triageClientComponents</artifactId>
 		</dependency>
 

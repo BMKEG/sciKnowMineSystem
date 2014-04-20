@@ -11,7 +11,7 @@
 			   minHeight="600">
 	
 	<fx:Declarations>
-		<base:sciKnowMineSystemContext contextView="{this}"/>
+		<base:digitalLibraryContext contextView="{this}"/>
 	</fx:Declarations>
 				
 	<s:VGroup height="100%" width="100%" 
@@ -20,7 +20,7 @@
 		<!--<s:Image id="sksLogo" source="@Embed(source='org/sciknowsoft/SciKnowSoft_LockUp.jpg')"/>-->
 
 		<s:HGroup height="35" width="100%" >
-			<s:Label text="SciKnowMine System" fontSize="24" fontFamily="Arial" fontWeight="bold"/>
+			<s:Label text="Base Digital Library" fontSize="24" fontFamily="Arial" fontWeight="bold"/>
 			<mx:Spacer width="100%"/>
 			<!--<s:Label text="login goes here" fontSize="12" fontFamily="Arial" />
 			<s:Label text="search goes here" fontSize="12" fontFamily="Arial" />-->
@@ -29,23 +29,8 @@
 		<mx:LinkBar borderStyle="none" backgroundAlpha="1.0" dataProvider="{myViewStack}"/>
 		
 		<mx:ViewStack id="myViewStack" 
-					  borderStyle="none"  
+					  borderStyle="none"
 					  height="100%" width="100%">
-			
-			<s:NavigatorContent id="dashNav" label="Dashboard">
-				<dash:DashboardModule label="Dashboard" id="dashboard" height="100%" width="100%"/>
-			</s:NavigatorContent>
-			
-			<!-- This is where we do text mining on the documents for TRIAGE-->
-			<s:NavigatorContent id="triageNav" label="Upload/Triage Papers ">
-				<triage:TriageModule label="Triage" id="triage" height="100%" width="100%"/>
-			</s:NavigatorContent>
-			
-			<!-- This is an compoent to expose the text from the articles 
-			effectively and coherently-->
-			<s:NavigatorContent id="lapdftextNav" label="Extract Text">
-				<lapdftext:LapdftextModule_xx label="Text Extraction" id="lapdftext" height="100%" width="100%"/>
-			</s:NavigatorContent>
 
 			<!-- This is an overview of the Documents in the system 
 			and users' annotations on them -->
@@ -53,6 +38,11 @@
 				<digitalLibrary:DigitalLibraryModule label="Digital Library" id="digLib" height="100%" width="100%"/>
 			</s:NavigatorContent>
 
+			<!-- This is an compoent to expose the text from the articles 
+			effectively and coherently-->
+			<s:NavigatorContent id="lapdftextNav" label="Extract Text">
+				<lapdftext:LapdftextModule1 label="Text Extraction" id="lapdftext" height="100%" width="100%"/>
+			</s:NavigatorContent>
 
 		</mx:ViewStack>
 	</s:VGroup>
