@@ -20,7 +20,7 @@
 		<!--<s:Image id="sksLogo" source="@Embed(source='org/sciknowsoft/SciKnowSoft_LockUp.jpg')"/>-->
 
 		<s:HGroup height="35" width="100%" >
-			<s:Label text="SciKnowMine System" fontSize="24" fontFamily="Arial" fontWeight="bold"/>
+			<s:Label text="SciKnowMine Triage" fontSize="24" fontFamily="Arial" fontWeight="bold"/>
 			<mx:Spacer width="100%"/>
 			<!--<s:Label text="login goes here" fontSize="12" fontFamily="Arial" />
 			<s:Label text="search goes here" fontSize="12" fontFamily="Arial" />-->
